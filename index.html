@@ -33,6 +33,7 @@
             <section>
                 <H1>06 77 67 23 53</H1>
                 <H2>bebon.pierre<span id="green">@</span>gmail.com</H2>
+                <!-- <img src="qr-code.png"/> -->
                 <!-- <h2>💻</h2> -->
             </section>
         </div>
@@ -42,6 +43,7 @@
         <summary>
         </summary>
         <main style="">
+
         <form>
             <!-- 3840 × 2160 px -->
             <div>
@@ -80,6 +82,15 @@
             // main.style.height = parseInt(y);
             main.style.backgroundPositionX = -parseInt(x)+"px";
             main.style.backgroundPositionY = -parseInt(y)+"px";
+            main.style.backgroundSize = parseInt(size)+"px";
+
+        });
+    }
+
+    function updateBG2(size) {
+        let mainArray = document.querySelectorAll("main");
+        mainArray.forEach(function(main) {
+        
             main.style.backgroundSize = parseInt(size)+"px";
 
         });
