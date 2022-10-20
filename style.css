@@ -76,14 +76,14 @@ img {
 }
 
 i {
-    font-size: 2em;
+    font-size: 1.3em;
     color : #43956d;
     font-style: none;
     
 }
 
 aside {
-    width: 100px;
+    /* width: 100px; */
 }
 
 h1, h2 {
@@ -94,12 +94,24 @@ h1, h2 {
 
 h1 {
     font-size: 2.5em;
+    line-height: 1.1em;
+}
+
+i {
+    /* font-weight: bold; */
+    -webkit-text-stroke: -1px;
+    transform: translateY(5px);
+    margin: 0px 5px;
 }
 
 h2 {
   font-size: 1.2em;
   color : #43956d;
+  letter-spacing: 0.05em;
+}
 
+#back h2 {
+    letter-spacing: 0.08em;
 }
 
 
