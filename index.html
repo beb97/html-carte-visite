@@ -12,7 +12,10 @@
     <main id="front">
         <div id="border">
             <aside>
-                <img src="logo.png"/>
+                <div id="logo-wrap">
+
+                    <img src="logo3.png"/>
+                </div>
             </aside>
             <section>
                 <h1>Pierre Bébon</h1>
@@ -34,5 +37,53 @@
             </section>
         </div>
     </main>
+
+    <details>
+        <summary>
+        </summary>
+        <main style="">
+        <form>
+            <!-- 3840 × 2160 px -->
+            <div>
+                <span>x : </span>
+                <input type="range" value="0" name="x" id="x" oninput="updateBG()" min="1" max="3840" step="5"/>
+                <label for="x" id="x-label"></label>
+            </div>
+            <div>
+                <span>y : </span>
+                <input type="range" value="0" name="y" id="y" oninput="updateBG()" min="1" max="2160" step="5"/>
+                <label for="y" id="y-label"></label>
+            </div>
+            <div>
+                <span>zoom : </span>
+                <input type="range" value="1800" name="size" id="size" oninput="updateBG()" min="400" max="1800" step="5"/>
+                <label for="size" id="size-label"></label>
+            </div>
+        </form>
+    </main>
+    </details>
+
 </body>
+<script>
+    function updateBG() {
+        let mainArray = document.querySelectorAll("main");
+        mainArray.forEach(function(main) {
+        
+            let x = document.querySelector("#x").value;
+            document.querySelector("#x-label").innerHTML = x;
+            let y = document.querySelector("#y").value;
+            document.querySelector("#y-label").innerHTML = y;
+            let size = document.querySelector("#size").value;
+            document.querySelector("#size-label").innerHTML = size;
+            console.log(x, y, main)
+            // main.style.width = parseInt(x);
+            // main.style.height = parseInt(y);
+            main.style.backgroundPositionX = -parseInt(x)+"px";
+            main.style.backgroundPositionY = -parseInt(y)+"px";
+            main.style.backgroundSize = parseInt(size)+"px";
+
+        });
+    }
+    
+</script>
 </html>
