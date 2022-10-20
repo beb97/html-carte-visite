@@ -39,6 +39,8 @@ section {
     color: #355c49;
 }
 
+
+#front section,
 #back section {
     /* border: 3px solid #73c69e; */
     
@@ -48,7 +50,13 @@ section {
     flex-grow: 1;
     /* justify-content: space-around; */
     /* background-color: #e0fbee; */
-    background: radial-gradient( white,#e0fbee);
+    background-color: rgba(224, 251, 238,0.5);
+    /* background: radial-gradient( white,#e0fbee); */
+}
+
+img {
+    background-color: rgba(224, 251, 238,0.5);
+    border-radius: 1.4em;
 }
 
 #border {
@@ -57,9 +65,8 @@ section {
     align-items: center;
     flex-direction: column;
 
-    background: linear-gradient(0.32turn,#355c49, #73c69e);
+    /* background: linear-gradient(0.32turn,#355c49, #73c69e); */
 
-    /* border: 3px solid #73c69e; */
     border-radius: 2em;
     width: 95%;
     margin: 0.4em;
