@@ -36,7 +36,7 @@ section {
 }
 
 #front h2 {
-    color: #355c49;
+    /* color: #355c49; */
 }
 
 
@@ -98,7 +98,8 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  color : #73c69e;
+  color : #43956d;
+
 }
 
 
