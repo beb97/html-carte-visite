@@ -51,12 +51,14 @@ section {
     /* justify-content: space-around; */
     /* background-color: #e0fbee; */
     background-color: rgba(224, 251, 238,0.5);
+    box-shadow: #355c49 0px 0px 1px 1px;
     /* background: radial-gradient( white,#e0fbee); */
 }
 
 img {
     background-color: rgba(224, 251, 238,0.5);
     border-radius: 1.4em;
+    /* box-shadow: #355c49 0px 0px 1px 1px; */
 }
 
 #border {
