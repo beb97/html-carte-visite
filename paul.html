@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Carte de visite</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="paul.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/38695af7b0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="front">
+      <div id="border">
+        <aside>
+          <div id="logo-wrap">
+            <img src="logo-paul.png" />
+          </div>
+        </aside>
+        <section>
+          <h1>Paul Bébon</h1>
+          <h2>Artisan <i class="fa-solid fa-drumstick-bite"></i> Boucher</h2>
+        </section>
+      </div>
+    </main>
+    <main id="back">
+      <div id="border">
+        <section>
+          <h1>06 73 51 08 67</h1>
+          <h2>bebon.paul<span id="green">@</span>gmail.com</h2>
+        </section>
+      </div>
+    </main>
+
+    <details>
+      <summary></summary>
+
+      <form>
+        <!-- 3840 × 2160 px -->
+        <div>
+          <span>x : </span>
+          <input
+            type="range"
+            value="0"
+            name="x"
+            id="x"
+            oninput="updateBG()"
+            min="1"
+            max="3840"
+            step="5"
+          />
+          <label for="x" id="x-label"></label>
+        </div>
+        <div>
+          <span>y : </span>
+          <input
+            type="range"
+            value="0"
+            name="y"
+            id="y"
+            oninput="updateBG()"
+            min="1"
+            max="2160"
+            step="5"
+          />
+          <label for="y" id="y-label"></label>
+        </div>
+        <div>
+          <span>zoom : </span>
+          <input
+            type="range"
+            value="1800"
+            name="size"
+            id="size"
+            oninput="updateBG()"
+            min="400"
+            max="1800"
+            step="5"
+          />
+          <label for="size" id="size-label"></label>
+        </div>
+      </form>
+    </details>
+  </body>
+  <script>
+    function updateBG() {
+      let mainArray = document.querySelectorAll("main");
+      mainArray.forEach(function (main) {
+        let x = document.querySelector("#x").value;
+        document.querySelector("#x-label").innerHTML = x;
+        let y = document.querySelector("#y").value;
+        document.querySelector("#y-label").innerHTML = y;
+        let size = document.querySelector("#size").value;
+        document.querySelector("#size-label").innerHTML = size;
+        console.log(x, y, main);
+        // main.style.width = parseInt(x);
+        // main.style.height = parseInt(y);
+        main.style.backgroundPositionX = -parseInt(x) + "px";
+        main.style.backgroundPositionY = -parseInt(y) + "px";
+        main.style.backgroundSize = parseInt(size) + "px";
+      });
+    }
+
+    function updateBG2(size) {
+      let mainArray = document.querySelectorAll("main");
+      mainArray.forEach(function (main) {
+        main.style.backgroundSize = parseInt(size) + "px";
+      });
+    }
+  </script>
+</html>

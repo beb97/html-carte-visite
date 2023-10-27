@@ -1,0 +1,28 @@
+:root {
+    --t-primary: #cc372d;
+    --t-secondary: #7f221c;
+}
+
+#front img {
+    width: 120px;
+}
+
+h1, h2 {
+    color: var(--t-primary);
+}
+
+i, #green {
+    color: var(--t-secondary);
+}
+
+aside {
+    box-shadow:var(--t-secondary) 0px 0px 1px 2px;
+}
+
+section {
+    box-shadow:var(--t-secondary) 0px 0px 1px 1px;
+}
+
+main {
+    background-image: url(bg-paul.png);
+}
