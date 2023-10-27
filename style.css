@@ -1,10 +1,13 @@
 body {
+    transform-origin: top;
+    transform: scale(0.5);
+    height: 2100px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-grow: 1;
+    font-size: 3em;
+    
 }
 main {
     /* <!-- 3840 × 2160 px --> */
@@ -12,13 +15,12 @@ main {
     background-position-y: -16px;
     background-position-x: -26px;
     /* background-size: 1115px; */
-    background-size: 487px;
+    background-size: 1455px;
 
-
-    width: 8.5cm;
-    height: 5.5cm;
-    /* width: 8.8cm;
-    height: 5.8cm; */
+    /* width: 8.5cm;
+    height: 5.5cm; */
+    width: 1039px;
+    height: 685px;
 
     border-radius: 2em;
     box-shadow: 4px 11px 14px 3px grey;;
@@ -41,43 +43,33 @@ section {
 section {
     border-radius: 2em;
     width: 100%;
-    margin: 0.4em;
+    margin: 0.4em 0;
     background-color: rgba(224, 251, 238,0.5);
     box-shadow: #355c49 0px 0px 1px 1px;
 }
 #front section {
-    padding: 2px 0 10px 0;
+    padding: 10px 0 30px 0;
 }
 
 #back section {
-    padding: 25px 0 30px 0;
+    padding: 50px 0 60px 0;
 }
 
 aside {
-    box-shadow: #355c49 0px 0px 1px 2px;
+    box-shadow: #355c49 0px 0px 1px 10px;
     background-color: rgba(224, 251, 238,0.5);
-    border-radius: 20px;
-    width: 80px;
-    height: 80px;
+    border-radius: 1em;
+    width: 250px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
-}
-
-#logo-wrap {
-    background-color: transparent;
-    border-radius: 19px;
-    width: 78px;
-    height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 0.6em;
 }
 
 #front img {
-    filter: drop-shadow(0px 0px 1px black);
-    width: 50px;
+    filter: drop-shadow(0px 0px 4px black);
+    width: 150px;
     height: auto;
 }
 
@@ -86,13 +78,14 @@ aside {
 }
 
 #border {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 2em;
-    width: 95%;
-    margin: 0.4em;
+    width: 90%;
+    margin: 0.4em 2em;
     flex-grow: 1;
 }
 
@@ -111,7 +104,7 @@ i {
     font-size: 1.3em;
     -webkit-text-stroke: -1px;
     transform: translateY(5px);
-    margin: 0px 5px;
+    margin: 0 0.1em;
     color : #355c49;
 }
 
